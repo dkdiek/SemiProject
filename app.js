@@ -17,7 +17,7 @@ io.on("connection",(socket)=>{
         io.emit("chatting", {
             name: name,
             msg : msg,
-            time : moment(new Date()).format("h:ss A")
+            time : moment(new Date()).format("h:mm A")
         })
     })
 })
