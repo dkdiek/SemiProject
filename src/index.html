@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 페인트 css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- 채팅 css -->
+    <link rel="stylesheet" href="css/styles-chat.css">
+    <title>Painting</title>
+     <!-- 구글 폰트 -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<!--상단-->
+	<div class="top">
+		<h1>'Catch! 나의 마음을 맞춰봐!'</h1>
+	</div>
+	<!-- 캔버스 + 그리기 도구 -->
+	<div class="wrapper">
+	<!-- 그리기 도구 -->
+    <div class="controls">
+          <!-- 툴 버튼 -->
+        <div class="controls__btns">
+          <!-- 저장 버튼 -->
+            <button id="jsSave">
+				<img src="https://cdn1.iconfinder.com/data/icons/ios-11-glyphs/30/save-512.png" alt="Save Icon" width="50px" height="50px">
+            </button>
+            <!-- 브러쉬 버튼 -->
+            <button class="toolMode" id="brushBtn">
+				<img id="modeIcon" src="https://www.freeiconspng.com/thumbs/paint-brush-icon/paint-brush-icon-3.png">
+			</button>
+               <!-- 페인트 버튼 -->
+            <button class="toolMode" id="paintBtn">
+				<img id="modeIcon" src="https://cdn-icons-png.flaticon.com/512/67/67968.png">
+			</button>
+        </div>
+        <!-- 브러쉬 크기 조절 -->
+        <div class="controls__range">
+            <input type="range" id="jsRange"
+             min="0.1" max="20.0" value="2.5" step="0.1"/>
+        </div>
+        <!-- 색상 선택 버튼 -->
+        <div class="controls__colors" id="jsColors">
+            <div class="controls__color jsColor" 
+                 style="background-color: black;"></div>
+            <div class="controls__color jsColor" 
+                 style="background-color: white;"></div>
+            <div class="controls__color jsColor" 
+                 style="background-color: red;"></div>
+            <div class="controls__color jsColor" 
+                 style="background-color: orange;"></div>
+            <div class="controls__color jsColor" 
+                 style="background-color: yellow;"></div>
+            <div class="controls__color jsColor" 
+                 style="background-color: green;"></div>
+            <div class="controls__color jsColor" 
+                 style="background-color: blue;"></div>
+            <div class="controls__color jsColor" 
+                 style="background-color: navy;"></div>
+            <div class="controls__color jsColor" 
+                 style="background-color: purple;"></div>
+        </div>
+    </div>
+	<!-- 캔버스 -->
+    <canvas id="jsCanvas" class="canvas"></canvas>
+   
+    <!-- 채팅 -->
+    <div class="chatting">
+          <div class="user-container">
+               <label for="nickname">닉네임:</label>
+               <input type="text" id="nickname">
+          </div>
+          <div class="display-container">
+               <ul class="chatting-list">
+               
+               </ul>
+          </div>
+          <div class="input-container">
+               <span>
+               <input type="text" class="chatting-input">
+               <button class="send-button">전송</button>
+               </span>
+          </div>
+    </div>
+</div>
+<script src="js/paint.js"></script>
+<!-- 채팅 스크립트 -->
+<script src="/socket.io/socket.io.js"> </script>
+<script src="js/chat.js"> </script>
+
+</body>
+</html>
