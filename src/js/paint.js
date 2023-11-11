@@ -19,7 +19,7 @@ ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
 
 ctx.strokeStyle = INITIAL_COLOR;
 ctx.fillStyle = INITIAL_COLOR;
-ctx.lineWidth = 2.5; /* 라인 굵기 */
+ctx.lineWidth = 10; /* 라인 굵기 */
 
 let painting = false;
 let filling = false;
