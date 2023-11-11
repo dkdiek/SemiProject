@@ -46,13 +46,18 @@ function LiModel(name, msg, time){
     this.makeLi = () => {
         const li = document.createElement("li");
         li.classList.add(nickname.value === this.name ? "sent" : "received")
-        const dom = `
-                    <span class="profile">
-                    <span class="user">${this.name}</span>
-                    <img class="image" src="https://source.unsplash.com/random/300×300" alt="anu">
-                    </span>
-                    <span class="message">${this.msg}</span>
-                    <span class="time">${this.time}</span>`;
+        const dom = `<div id="chat-container">
+                        <div id="chat-container-top">
+                            <span class="user">${this.name}</span>
+                        </div>
+                        <div id="chat-container-bottom">
+                            <span class="profile">
+                                <img class="image" src="https://source.unsplash.com/random/300×300" alt="anu">
+                            </span>
+                            <span class="message">${this.msg}</span>
+                            <span class="time">${this.time}</span>
+                        </div>
+                    </div>`;
         li.innerHTML = dom;
         chatList.appendChild(li);
     }

@@ -1,15 +1,14 @@
-
-.chatting{
-    height : 750px;
+.chatting {
+    height: 750px;
     width: 400px;
-    font-family: dongle;
+    font-family: 'Dongle', sans-serif;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
 
-.user-container{
+.user-container {
     background: #9bbbd4;
     flex: 1;
     display: flex;
@@ -20,29 +19,30 @@
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.068);
 }
 
-.user-container label{
-    flex :2;
+.user-container label {
+    flex: 2;
     display: inline-flex;
     font-size: 25px;
     align-items: center;
     justify-content: center;
 }
 
-.user-container input{
-    flex:8;
+.user-container input {
+    flex: 8;
     border-radius: 3px;
     border: none;
     height: 30px;
-    font-size: 20px;
+    font-size: 25px;
+    font-family: 'Dongle', sans-serif;
     width: 200px;
     margin-right: 20px;
 }
 
-.display-container{
+.display-container {
     flex: 10;
     margin-top: 20px;
     margin-bottom: 20px;
-    background: #9bbbd4;    ;
+    background: #9bbbd4;
     overflow-y: scroll;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.068);
@@ -53,14 +53,14 @@
     width: 12px; /* 스크롤바의 너비 */
 }
 
-.input-container{
+.input-container {
     flex: 1;
     display: flex;
     justify-content: stretch;
     align-items: stretch;
 }
 
-.input-container span{
+.input-container span {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -70,7 +70,7 @@
 
 .chatting-input {
     font-family: 'Dongle', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     height: 100%;
     flex: 8;
     border: none;
@@ -78,8 +78,8 @@
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.068);
 }
 
-.send-button{
-    flex:2;
+.send-button {
+    flex: 2;
     margin-left: 5px;
     background-color: #ffeb33;
     border: none;
@@ -90,52 +90,91 @@
     font-size: 25px;
 }
 
-.chatting-list li {
-    width: 90%;
-    padding: 0.3rem;
+#chat-container {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.3rem;
     justify-content: flex-start;
     align-items: flex-end;
-    margin-top: 0.5rem;
+    margin-top: 25px;
 }
 
-.profile{
+#chat-container-top {
+    display: flex;
+    width: 100%;
+}
+
+#chat-container-bottom {
+    display: flex;
+    width: 100%;
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+#chat-container-bottom .time {
+    align-self: flex-end;
+}
+
+.user {
+    align-self: flex-start;
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+}
+
+.profile {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex:1;
+    flex: 1;
 }
 
-.profile .user{
-    font-size: 25px;
-    margin-bottom: 0.3rem;
-}
-
-.profile .image{
+.profile .image {
     border-radius: 50%;
     object-fit: cover;
     width: 50px;
     height: 50px;
 }
 
-.message{
+.message {
     border-radius: 5px;
     padding: 0.5rem;
     font-size: 25px;
     margin: 0 5px;
-    flex:8;
+    flex: 8;
 }
 
 .time {
-    flex-direction: column;
     font-size: 19px;
     margin: 0 5px;
 }
 
 .sent {
+    display: flex;
     flex-direction: row-reverse;
-    float: right;
+}
+
+.sent #chat-container-bottom {
+    justify-content: flex-end;
+}
+
+.received #chat-container-bottom {
+    justify-content: flex-start;
+}
+
+.sent #chat-container-top .user {
+    align-self: flex-end;
+}
+
+.received #chat-container-top .user {
+    align-self: flex-start;
+}
+
+.sent #chat-container-bottom,
+.sent #chat-container-top {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .sent .message {
@@ -145,4 +184,3 @@
 .received .message {
     background: #fff;
 }
-
