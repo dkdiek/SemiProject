@@ -52,7 +52,7 @@ function LiModel(name, msg, time){
                         </div>
                         <div id="chat-container-bottom">
                             <span class="profile">
-                                <img class="image" src="https://source.unsplash.com/random/300×300" alt="anu">
+                                <img class="image" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="anu">
                             </span>
                             <span class="message">${this.msg}</span>
                             <span class="time">${this.time}</span>
